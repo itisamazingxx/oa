@@ -1,7 +1,7 @@
 '''
 Implement a prototype of a friend recommendation system for a social media application.
 
-There are n users indexed from 1 to n, and m friends represented as a 2d array, friendships, where the ith friendship is a connection between users friendships[i][0] and friendships[i][1].
+There are n users indexed from 0 to n, and m friends represented as a 2d array, friendships, where the ith friendship is a connection between users friendships[i][0] and friendships[i][1].
 
 User x is suggested as a friend to user y if x and y are not friends and have the maximum number of common friends, i.e. a friend of both x and y. If there are multiple possible such users x, the one with the minimum index is suggested.
 
