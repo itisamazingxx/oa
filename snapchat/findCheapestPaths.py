@@ -9,6 +9,7 @@ class Solution:
     def findCheapestPaths(self, connections, start, end):
         # Dijkstra
         # 用于加权图中的单源最短路径问题
+        # 本题是求具体方案, 稍微复杂一些
         
         n = len(connections)
         # 构建邻接表

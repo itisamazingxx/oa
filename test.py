@@ -1,16 +1,22 @@
-'''
-0/1背包求总方案
-给定i个正整数nums[i], 使得和为target
-求总共有多少总选择方案
-'''
 class Solution:
+    def trap(self, height):
+        # 接雨水问题 Brute-Force
+        n = len(height)
+        ans = 0
+        for i in range(n):
+            leftMax = 0
+            rightMax = 0
+            for l in range(i + 1):
+                leftMax = max(leftMax, height[l])
+            for r in range(i, n):
+                rightMax = max(rightMax, height[r])
+            ans += min(leftMax, rightMax) - height[i]
+        return ans
+    
+solution = Solution()
+height = [0,1,0,2,1,0,1,3,2,1,2,1]
+print(solution.trap(height))  # 输出: 6
 
-    def pick(self, nums, target):
+height = [4,2,0,3,2,5]
+print(solution.trap(height))  # 输出: 9
 
-        # dp[i]表示在当前容量下的方案数
-        # 可以选当前整数
-        dp = [0] * (target + 1)
-        for num in nums:
-            for i in range(target, num - 1, -1):
-                dp[i] = dp[i - num]
-        return dp[-1]

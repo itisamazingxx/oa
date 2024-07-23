@@ -1,3 +1,9 @@
+'''
+参数: 给定一个仅包含箭头字符的s字符串(上下左右)
+其中每个箭头逆时针变到下一个状态算一步(up变left算一步)
+问: 总共需要多少步才能将字符串中箭头字符全部变成一样的方向?
+
+'''
 class Solution:
     def minStepsToSameDirection(self, s):
         directions = ["^", ">", "v", "<"]
