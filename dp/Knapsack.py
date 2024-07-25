@@ -26,7 +26,6 @@ class Solution:
                     dp[i][j] = dp[i - 1][j]
         return dp[n][w]
 
-
 solution = Solution()
 n = 3
 w = 4
